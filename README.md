@@ -7,7 +7,7 @@ forms, buttons, tables, grids, navigation, and more.
 TwitterBootstrapToolkit integrates Twitter Bootstrap LESS for Rails Asset
 Pipeline.
 
-[![Gem Version](https://badge.fury.io/gh/TwitterBootstrapToolkit.svg)](http://badge.fury.io/gh/TwitterBootstrapToolkit)
+[![Version](https://badge.fury.io/gh/pinifloyd/TwitterBootstrapToolkit.svg)](http://badge.fury.io/gh/pinifloyd/TwitterBootstrapToolkit)
 
 ## Installing the Gem
 
