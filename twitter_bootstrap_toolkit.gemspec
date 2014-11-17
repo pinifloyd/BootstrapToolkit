@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.platform    = Gem::Platform::RUBY
   spec.authors     = ["Sergey Hanchar"]
   spec.email       = ["hanchar.sergey@gmail.com"]
-  spec.summary     = %q{Twitter Bootstrap Less Toolkit}
-  spec.description = %q{Twitter Bootstrap Less Toolkit}
+  spec.summary     = %q{Twitter Bootstrap Toolkit}
+  spec.description = %q{Twitter Bootstrap Toolkit}
   spec.homepage    = ""
   spec.license     = "MIT"
 
@@ -36,10 +36,3 @@ Gem::Specification.new do |spec|
     ***************************************************************************
   MSG
 end
-
-# spec.add_dependency             'railties',   '>= 3.1'
-# spec.add_dependency             'actionpack', '>= 3.1'
-# spec.add_runtime_dependency     'execjs'
-# spec.add_runtime_dependency     'rails', '>= 3.1'
-# spec.add_development_dependency 'less'
-# spec.add_development_dependency 'therubyracer'

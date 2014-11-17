@@ -1,11 +1,8 @@
 # Twitter Bootstrap 3.3.1 for Rails 4
 
 Twitter Bootstrap is a toolkit from Twitter designed to kickstart development
-of webapps and sites. It includes base CSS/LESS/SCSS and HTML for typography,
-forms, buttons, tables, grids, navigation, and more.
-
-TwitterBootstrapToolkit integrates Twitter Bootstrap LESS for Rails Asset
-Pipeline.
+of webapps and sites. It includes base CSS/LESS/SCSS for typography, forms,
+buttons, tables, grids, navigation, and more.
 
 [![GitHub version](https://badge.fury.io/gh/pinifloyd%2FTwitterBootstrapToolkit.svg)](http://badge.fury.io/gh/pinifloyd%2FTwitterBootstrapToolkit)
 
@@ -14,8 +11,7 @@ Pipeline.
 The TwitterBootstrapToolkit can provide the Twitter Bootstrap stylesheets in
 [LESS](http://lesscss.org/) way. It provides more customization options, like
 changing theme colors, and provides useful LESS mixins for your code, but
-requires the LESS gem and the Ruby Racer Javascript runtime (not available on
-Microsoft Windows).
+requires the LESS gem and the Ruby Racer Javascript runtime.
 
 Include these lines in the Gemfile to install TwitterBootstrapToolkit:
 
@@ -32,7 +28,7 @@ Then run `bundle install` from the command line:
 ## Changelog
 
 <ul>
-  <li>Version 0.0.1 (WIP)</li>
+  <li>Version 0.0.1 - Initial</li>
 </ul>
 
 ## Thanks
