@@ -4,31 +4,53 @@ Twitter Bootstrap is a toolkit from Twitter designed to kickstart development
 of webapps and sites. It includes base CSS/LESS/SCSS for typography, forms,
 buttons, tables, grids, navigation, and more.
 
-[![GitHub version](https://badge.fury.io/gh/pinifloyd%2FTwitterBootstrapToolkit.svg)](http://badge.fury.io/gh/pinifloyd%2FTwitterBootstrapToolkit)
+[![GitHub version](https://badge.fury.io/gh/pinifloyd%2FBootstrapToolkit.svg)](http://badge.fury.io/gh/pinifloyd%2FBootstrapToolkit)
 
 ## Installing the Gem
 
-The TwitterBootstrapToolkit can provide the Twitter Bootstrap stylesheets in
-[LESS](http://lesscss.org/) way. It provides more customization options, like
-changing theme colors, and provides useful LESS mixins for your code, but
-requires the LESS gem and the Ruby Racer Javascript runtime.
+The BootstrapToolkit provides the Twitter Bootstrap stylesheets in LESS way. It
+provides more customization options, like changing theme colors, and provides
+useful LESS mixins for your code, but requires the LESS gem and the Ruby Racer
+Javascript runtime.
 
-Include these lines in the Gemfile to install TwitterBootstrapToolkit:
+Include these lines in the Gemfile to install BootstrapToolkit:
 
 ```ruby
 gem "therubyracer"
 gem "less-rails"
-gem "twitter_bootstrap_toolkit', git: "git://github.com/pinifloyd/TwitterBootstrapToolkit.git"
+gem "bootstrap_toolkit', git: "git://github.com/pinifloyd/BootstrapToolkit.git"
 ```
 
 Then run `bundle install` from the command line:
 
     bundle install
 
+## Usage
+
+BootstrapToolkit create next folders in your application and copy files into
+them:
+
+    app/assets/stylesheets/frameworks/twitter_bootstrap
+
+If you run command without any options it will copy by default all LESS/JS and
+initializer files:
+
+    rails g bootstrap_toolkit:install
+
+You may specify which files should be copy into your application:
+
+    rails g bootstrap_toolkit:install --less all
+    rails g bootstrap_toolkit:install --less alerts forms
+
+For small help run from the command line next command:
+
+    rails g bootstrap_toolkit:install -h
+
 ## Changelog
 
 <ul>
   <li>Version 0.0.1 - Initial</li>
+  <li>Version 0.0.2 - Copy all LESS files</li>
 </ul>
 
 ## Thanks

@@ -1,17 +1,17 @@
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require "twitter_bootstrap_toolkit/version"
+require "bootstrap_toolkit/version"
 
 Gem::Specification.new do |spec|
-  spec.name        = "twitter_bootstrap_toolkit"
-  spec.version     = TwitterBootstrapToolkit::VERSION
+  spec.name        = "bootstrap_toolkit"
+  spec.version     = BootstrapToolkit::VERSION
   spec.platform    = Gem::Platform::RUBY
   spec.authors     = ["Sergey Hanchar"]
   spec.email       = ["hanchar.sergey@gmail.com"]
   spec.summary     = %q{Twitter Bootstrap Toolkit}
-  spec.description = %q{Twitter Bootstrap Toolkit}
-  spec.homepage    = ""
+  spec.description = %q{Provide Twitter Bootstrap toolkit, methods, helpers...}
+  spec.homepage    = "https://github.com/pinifloyd/BootstrapToolkit"
   spec.license     = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -28,11 +28,13 @@ Gem::Specification.new do |spec|
     ***************************************************************************
     ExecJS supports these runtimes:
 
-    therubyracer - Google V8 embedded within Ruby
-    therubyrhino - Mozilla Rhino embedded within JRuby
-    Node.js
+    therubyracer         - Google V8 embedded within Ruby
+    therubyrhino         - Mozilla Rhino embedded within JRuby
     Apple JavaScriptCore - Included with Mac OS X
-    Microsoft Windows Script Host (JScript)
+    JScript              - Microsoft Windows Script Host
+    Node.js
     ***************************************************************************
+
+    Thanks for install. Have a nice day ;)
   MSG
 end
