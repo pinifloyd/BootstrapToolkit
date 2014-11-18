@@ -42,7 +42,7 @@ You may specify which files should be copy into your application:
     rails g bootstrap_toolkit:install --less all
     rails g bootstrap_toolkit:install --less alerts forms
 
-For small help run from the command line next command:
+For quick help run from the command line next command:
 
     rails g bootstrap_toolkit:install -h
 
