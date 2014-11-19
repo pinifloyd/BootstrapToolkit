@@ -18,7 +18,6 @@ module BootstrapToolkit
         specified then command will copy all specified stylesheets and js. You
         can use options to set stylesheets type.
       DESC
-
       
       class_option :less, type: :array, desc: <<-DESC.strip_heredoc
         Type LESS files to install. Or type 'all' to install all files.
@@ -39,7 +38,10 @@ module BootstrapToolkit
           FileUtils.cp_r source_path_for(:less), destination_path_for(:stylesheets)
         else
           # TODO: copy specified files
-          puts 'specified'
+          # files = Dir[source_path_for(:less) + "/**/*"].map do |path|
+          #   File.basename(path)
+          # end
+          # print_in_columns(files)
         end
 
         # files = files_by_type("less")
@@ -59,17 +61,13 @@ module BootstrapToolkit
       end
 
       def source_path_for(type)
-        File.expand_path("../../../../bundle/#{type}", __FILE__) # "/*" || "/**/*"
+        File.expand_path("../../../../bundle/#{type}", __FILE__)
       end
 
       # def files_by_type(type)
       #   Dir[source_path(type)].inject({}) do |files, path|
       #     files[file_name(path, type).to_sym] = path; files
       #   end
-      # end
-
-      # def source_path(type)
-      #   File.expand_path("../../../../bundle/#{type}", __FILE__) + "/**/*"
       # end
 
       # def file_name(path, type)
