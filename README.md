@@ -8,12 +8,15 @@ buttons, tables, grids, navigation, and more.
 
 ## Installing the Gem
 
-The BootstrapToolkit provides the Twitter Bootstrap stylesheets in LESS way. It
-provides more customization options, like changing theme colors, and provides
-useful LESS mixins for your code, but requires the LESS gem and the Ruby Racer
-Javascript runtime.
+The BootstrapToolkit provides the Twitter Bootstrap stylesheets in some ways:
+LESS, SCSS and CSS way. LESS and SCSS provides more customization options, like
+changing theme colors, and provides useful mixins for your code, but they have
+some requirements.
 
-Include these lines in the Gemfile to install BootstrapToolkit:
+### LESS way
+
+For using LESS we require the LESS gem and the Ruby Racer Javascript runtime.
+Include these lines in the Gemfile for using BootstrapToolkit in LESS way:
 
 ```ruby
 gem "therubyracer"
@@ -32,25 +35,23 @@ them:
 
     app/assets/stylesheets/frameworks/twitter_bootstrap
 
-If you run command without any options it will copy by default all LESS/JS and
-initializer files:
+You may want to see which files contains at BootstrapToolkit:
 
-    rails g bootstrap_toolkit:install
+    rails g bootstrap_toolkit:print_files --type=less
 
-You may specify which files should be copy into your application:
+To copy LESS files you should use install_less generator. Without options it
+will copy all LESS files into your application. But you may specify which files
+should be copy by --type option.
 
-    rails g bootstrap_toolkit:install --less all
-    rails g bootstrap_toolkit:install --less alerts forms
-
-For quick help run from the command line next command:
-
-    rails g bootstrap_toolkit:install -h
+    rails g bootstrap_toolkit:install_less
+    rails g bootstrap_toolkit:install_less --type alerts forms
 
 ## Changelog
 
 <ul>
   <li>Version 0.0.1 - Initial</li>
-  <li>Version 0.0.2 - Copy all LESS files</li>
+  <li>Version 0.0.2 - Added LESS files</li>
+  <li>Version 0.0.3 - You may copy LESS files</li>
 </ul>
 
 ## Thanks

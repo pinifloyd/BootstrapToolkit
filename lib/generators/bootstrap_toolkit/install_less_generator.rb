@@ -5,9 +5,7 @@ module BootstrapToolkit
     class InstallLessGenerator < Rails::Generators::Base
 
       desc <<-DESC.strip_heredoc
-        Create BootstrapToolkit initializer if it doesn't exist into
-        config/initializers as bootstrap_toolkit.rb. Also BootstrapToolkit
-        create next folder in your application and copy all LESS files into:
+        Create folder in your application and copy all LESS files into:
 
           app/assets/stylesheets/frameworks/twitter_bootstrap
 
@@ -17,28 +15,54 @@ module BootstrapToolkit
         Type LESS files which you want copy into your application.
       DESC
 
-      def copy_files
-        make_directory destination_path
+      FILE_TYPE   = ".less"
+      DESTINATION = %w(app assets stylesheets frameworks twitter_bootstrap)
+      SOURCE_PATH = %w(.. .. .. .. bundle less)
 
-        if options[:files].blank?
-          FileUtils.cp_r source_path, destination_path(:twitter_bootstrap)
-        else
-          # TODO: copy cpecified less files
-        end
+      def copy_files
+        prepare_options; copy_recurcive(source_path)
       end
 
     private
 
       def source_path
-        File.expand_path "../../../../bundle/less/", __FILE__
+        Pathname.new File.expand_path(File.join(SOURCE_PATH), __FILE__)
       end
 
-      def destination_path(name = nil)
-        Rails.root.join "app/assets/stylesheets/frameworks/#{name}"
+      def destination_path
+        Rails.root + File.join(DESTINATION)
       end
 
-      def make_directory(destination)
-        FileUtils.mkdir_p(destination) unless Dir.exist?(destination)
+      def prepare_options
+        options[:files].each.with_index do |file, index|
+          options[:files][index] = File.basename(file, FILE_TYPE)
+        end unless options[:files].blank?
+      end
+
+      def should_copy?(source)
+        source_name = File.basename(source, FILE_TYPE)
+
+        return true if options[:files].blank?
+        return true if options[:files].include?(source_name)
+      end
+
+      def copy_recurcive(source, depth = 0, parents = [])
+        destination = File.join(destination_path, parents)
+
+        source.each_child do |source|
+          depth += 1
+          
+          if source.file? && should_copy?(source)
+            FileUtils.mkdir_p(destination) unless Dir.exist?(destination)
+            FileUtils.cp(source, destination)
+          end
+
+          if source.directory?
+            copy_recurcive(source, depth, source.to_s.split("/").last(depth))
+          end
+
+          depth -= 1
+        end
       end
 
     end
