@@ -41,18 +41,10 @@ You may want to see which files contains at BootstrapToolkit:
 
 To copy LESS files you should use install_less generator. Without options it
 will copy all LESS files into your application. But you may specify which files
-should be copy by --type option.
+should be copy by --files option.
 
     rails g bootstrap_toolkit:install_less
-    rails g bootstrap_toolkit:install_less --type alerts forms
-
-## Changelog
-
-<ul>
-  <li>Version 0.0.1 - Initial</li>
-  <li>Version 0.0.2 - Added LESS files</li>
-  <li>Version 0.0.3 - You may copy LESS files</li>
-</ul>
+    rails g bootstrap_toolkit:install_less --files alerts forms
 
 ## Thanks
 
@@ -82,3 +74,11 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Changelog
+
+<ul>
+  <li>Version 0.0.1 - Initial</li>
+  <li>Version 0.0.2 - Added LESS files</li>
+  <li>Version 0.0.3 - You may copy LESS files</li>
+</ul>
