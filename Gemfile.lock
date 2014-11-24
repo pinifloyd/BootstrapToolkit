@@ -82,6 +82,4 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap_toolkit!
-  bundler (~> 1.6)
-  rails (>= 4.1.7)
-  rake
+  rails (~> 4.1.7)

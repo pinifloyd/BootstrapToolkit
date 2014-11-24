@@ -1,4 +1,4 @@
-# Twitter Bootstrap 3.3.1 for Rails 4
+# Twitter Bootstrap 3.3.1 for Rails 4 (WIP)
 
 Twitter Bootstrap is a toolkit from Twitter designed to kickstart development
 of webapps and sites. It includes base CSS/LESS/SCSS for typography, forms,
@@ -74,11 +74,3 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-## Changelog
-
-<ul>
-  <li>Version 0.0.1 - Initial</li>
-  <li>Version 0.0.2 - Added LESS files</li>
-  <li>Version 0.0.3 - You may copy LESS files</li>
-</ul>

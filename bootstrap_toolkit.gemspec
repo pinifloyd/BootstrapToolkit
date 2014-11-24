@@ -1,7 +1,9 @@
-lib = File.expand_path("../lib", __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+# lib = File.expand_path("../lib", __FILE__)
+# $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require "bootstrap_toolkit/version"
+# require "bootstrap_toolkit/version"
+
+require File.expand_path("../lib/bootstrap_toolkit/version", __FILE__)
 
 Gem::Specification.new do |spec|
   spec.name        = "bootstrap_toolkit"
@@ -9,8 +11,8 @@ Gem::Specification.new do |spec|
   spec.platform    = Gem::Platform::RUBY
   spec.authors     = ["Sergey Hanchar"]
   spec.email       = ["hanchar.sergey@gmail.com"]
-  spec.summary     = %q{Twitter Bootstrap Toolkit}
-  spec.description = %q{Provide Twitter Bootstrap toolkit, methods, helpers...}
+  spec.summary     = "Twitter Bootstrap Toolkit"
+  spec.description = "Provide Twitter Bootstrap styles, methods, helpers..."
   spec.homepage    = "https://github.com/pinifloyd/BootstrapToolkit"
   spec.license     = "MIT"
 
@@ -19,11 +21,10 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
   
+  # TODO: check other ruby versions
   spec.required_ruby_version = ">= 2.1.2"
 
-  spec.add_development_dependency "bundler", "~> 1.6"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "rails", ">= 4.1.7"
+  spec.add_development_dependency "rails", "~> 4.1.7"
 
   spec.post_install_message = <<-MSG
     Important: You may need to add a javascript runtime to you Gemfile.
