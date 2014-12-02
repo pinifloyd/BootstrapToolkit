@@ -23,12 +23,60 @@ Then run `bundle install` from the command line:
   bundle install
 ```
 
+## Usage
+
+### Stylesheets
+
+You may include all stylesheets into your project. To do that just add next
+line into your manifest file (app/assets/stylesheets/application.css):
+
+```
+  ...
+  *= require bootstrap_toolkit/bootstrap
+  ...
+```
+
+Or you may include only specific stylesheets. To do that just add files which
+you need into your manifest file (app/assets/stylesheets/application.css):
+
+```
+  ...
+  *= require bootstrap_toolkit/variables
+  *= require bootstrap_toolkit/mixins/forms
+  *= require bootstrap_toolkit/styles/normalize
+  *= require bootstrap_toolkit/styles/forms
+  ...
+```
+
+### Javascripts
+
+You may include all javascripts into your project. To do that just add next
+line into your manifest file (app/assets/javascripts/application.js):
+
+```
+  ...
+  //= require bootstrap_toolkit/bootstrap
+  ...
+```
+
+Or you may include only specific javascripts. To do that just add files which
+you need into your manifest file (app/assets/javascripts/application.js):
+
+```
+  ...
+  //= require bootstrap_toolkit/alert
+  //= require bootstrap_toolkit/button
+  //= require bootstrap_toolkit/tab
+  //= require bootstrap_toolkit/modal
+  ...
+```
+
 ## Structure
 
 ### Fonts
 
 ```
-  app/assets/fonts/
+  app/assets/fonts
   |-- bootstrap_toolkit
   |   |-- glyphicons-halflings-regular.eot
   |   |-- glyphicons-halflings-regular.svg
@@ -38,7 +86,23 @@ Then run `bundle install` from the command line:
 
 ### Javascripts
 
-TODO
+```
+  app/assets/javascripts
+  |-- bootstrap_toolkit
+  |   |-- affix.js
+  |   |-- alert.js
+  |   |-- bootstrap.js
+  |   |-- button.js
+  |   |-- carousel.js
+  |   |-- collapse.js
+  |   |-- dropdown.js
+  |   |-- modal.js
+  |   |-- popover.js
+  |   |-- scrollspy.js
+  |   |-- tab.js
+  |   |-- tooltip.js
+  |   |-- transition.js
+```
 
 ### Stylesheets
 
