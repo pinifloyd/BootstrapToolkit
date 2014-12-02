@@ -24,7 +24,10 @@ Gem::Specification.new do |spec|
   # TODO: check other ruby versions
   spec.required_ruby_version = ">= 2.1.2"
 
-  spec.add_development_dependency "rails", "~> 4.1.7"
+  # TODO: check other dependencies
+  spec.add_development_dependency "less-rails",   "~> 2.6.0"
+  spec.add_development_dependency "therubyracer", "~> 0.12.1"
+  spec.add_development_dependency "rails",        "~> 4.1.7"
 
   spec.post_install_message = <<-MSG
     Important: You may need to add a javascript runtime to you Gemfile.
