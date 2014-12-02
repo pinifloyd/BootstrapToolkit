@@ -23,6 +23,42 @@ Then run `bundle install` from the command line:
   bundle install
 ```
 
+## Structure
+
+### Fonts
+
+```
+  app/assets/fonts/
+  |-- bootstrap_toolkit
+  |   |-- glyphicons-halflings-regular.eot
+  |   |-- glyphicons-halflings-regular.svg
+  |   |-- glyphicons-halflings-regular.ttf
+  |   |-- glyphicons-halflings-regular.woff
+```
+
+### Javascripts
+
+TODO
+
+### Stylesheets
+
+```
+  app/assets/stylesheets
+  |-- bootstrap_toolkit
+  |   |-- mixins
+  |   |   |-- forms.less
+  |   |   |-- ...
+  |   |   |-- size.less
+  |   |-- styles
+  |   |   |-- forms.less
+  |   |   |-- ...
+  |   |   |-- wells.less
+  |   |-- bootstrap.less
+  |   |-- mixins.less
+  |   |-- styles.less
+  |   |-- variables.less
+```
+
 ## Thanks
 
 All twitter-bootstrap-rails contributors and http://twbs.github.io/bootstrap
