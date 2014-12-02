@@ -1,50 +1,27 @@
-# Twitter Bootstrap 3.3.1 for Rails 4 (WIP)
+# Twitter Bootstrap 3.3.1 for Rails 4
 
 Twitter Bootstrap is a toolkit from Twitter designed to kickstart development
-of webapps and sites. It includes base CSS/LESS/SCSS for typography, forms,
-buttons, tables, grids, navigation, and more.
+of webapps and sites. It includes base styles in LESS format for typography,
+forms, buttons, tables, grids, navigation, and more.
 
 [![GitHub version](https://badge.fury.io/gh/pinifloyd%2FBootstrapToolkit.svg)](http://badge.fury.io/gh/pinifloyd%2FBootstrapToolkit)
 
 ## Installing the Gem
 
-The BootstrapToolkit provides the Twitter Bootstrap stylesheets in some ways:
-LESS, SCSS and CSS way. LESS and SCSS provides more customization options, like
-changing theme colors, and provides useful mixins for your code, but they have
-some requirements.
-
-### LESS way
-
 For using LESS we require the LESS gem and the Ruby Racer Javascript runtime.
-Include these lines in the Gemfile for using BootstrapToolkit in LESS way:
+Include these lines into Gemfile for using BootstrapToolkit:
 
 ```ruby
-gem "therubyracer"
-gem "less-rails"
-gem "bootstrap_toolkit', git: "git://github.com/pinifloyd/BootstrapToolkit.git"
+  gem "therubyracer"
+  gem "less-rails"
+  gem "bootstrap_toolkit", git: "git://github.com/pinifloyd/BootstrapToolkit.git"
 ```
 
 Then run `bundle install` from the command line:
 
-    bundle install
-
-## Usage
-
-BootstrapToolkit create next folders in your application and copy files into
-them:
-
-    app/assets/stylesheets/frameworks/twitter_bootstrap
-
-You may want to see which files contains at BootstrapToolkit:
-
-    rails g bootstrap_toolkit:print_files --type=less
-
-To copy LESS files you should use install_less generator. Without options it
-will copy all LESS files into your application. But you may specify which files
-should be copy by --files option.
-
-    rails g bootstrap_toolkit:install_less
-    rails g bootstrap_toolkit:install_less --files alerts forms
+```console
+  bundle install
+```
 
 ## Thanks
 
